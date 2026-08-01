@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en" style="">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Login - Portal Sertifikasi AAJI</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#5d4200",
+              "inverse-primary": "#acc9f1",
+              "secondary-container": "#67b6ff",
+              "primary-fixed": "#d2e4ff",
+              primary: "#001831",
+              "on-tertiary-fixed": "#271900",
+              "on-primary-container": "#7995bc",
+              tertiary: "#221500",
+              outline: "#73777f",
+              "surface-container": "#edeeef",
+              "on-secondary-container": "#004673",
+              "on-primary-fixed-variant": "#2b486b",
+              "surface-container-highest": "#e1e3e4",
+              "outline-variant": "#c3c6cf",
+              "tertiary-fixed-dim": "#f7bd48",
+              "inverse-on-surface": "#f0f1f2",
+              "on-secondary-fixed-variant": "#004a78",
+              "on-tertiary-container": "#bd8b13",
+              "on-secondary-fixed": "#001d34",
+              "tertiary-fixed": "#ffdea6",
+              "on-secondary": "#ffffff",
+              "on-error-container": "#93000a",
+              "inverse-surface": "#2e3132",
+              "on-primary": "#ffffff",
+              secondary: "#00629e",
+              "on-error": "#ffffff",
+              surface: "#f8f9fa",
+              "on-background": "#191c1d",
+              "surface-container-low": "#f3f4f5",
+              "surface-dim": "#d9dadb",
+              "on-surface": "#191c1d",
+              "secondary-fixed": "#cfe5ff",
+              "primary-container": "#0b2d4e",
+              "secondary-fixed-dim": "#9acbff",
+              "on-surface-variant": "#43474e",
+              "on-tertiary": "#ffffff",
+              "error-container": "#ffdad6",
+              background: "#f8f9fa",
+              "surface-container-lowest": "#ffffff",
+              "surface-variant": "#e1e3e4",
+              "surface-bright": "#f8f9fa",
+              "primary-fixed-dim": "#acc9f1",
+              error: "#ba1a1a",
+              "surface-tint": "#446084",
+              "tertiary-container": "#3c2900",
+              "surface-container-high": "#e7e8e9",
+              "on-primary-fixed": "#001c38",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "margin-desktop": "32px",
+              "margin-mobile": "16px",
+              "container-max": "1280px",
+              "sidebar-width": "280px",
+              base: "8px",
+              gutter: "24px",
+            },
+            fontFamily: {
+              "headline-md": ["Manrope"],
+              "label-sm": ["Manrope"],
+              "headline-lg-mobile": ["Manrope"],
+              "body-md": ["Manrope"],
+              "body-sm": ["Manrope"],
+              "headline-lg": ["Manrope"],
+              "display-lg": ["Manrope"],
+              "label-md": ["Manrope"],
+              "body-lg": ["Manrope"],
+            },
+            fontSize: {
+              "headline-md": [
+                "24px",
+                {
+                  lineHeight: "32px",
+                  fontWeight: "600",
+                },
+              ],
+              "label-sm": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-lg-mobile": [
+                "24px",
+                {
+                  lineHeight: "32px",
+                  fontWeight: "700",
+                },
+              ],
+              "body-md": [
+                "16px",
+                {
+                  lineHeight: "24px",
+                  fontWeight: "400",
+                },
+              ],
+              "body-sm": [
+                "14px",
+                {
+                  lineHeight: "20px",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-lg": [
+                "32px",
+                {
+                  lineHeight: "40px",
+                  fontWeight: "700",
+                },
+              ],
+              "display-lg": [
+                "48px",
+                {
+                  lineHeight: "56px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "label-md": [
+                "14px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-lg": [
+                "18px",
+                {
+                  lineHeight: "28px",
+                  fontWeight: "400",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 1,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+
+      .deco-circle-tr {
+        position: fixed;
+        top: -50px;
+        right: -50px;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background-color: #0b2d4e;
+        opacity: 0.05;
+        z-index: -1;
+        pointer-events: none;
+      }
+
+      .deco-circle-bl {
+        position: fixed;
+        bottom: -100px;
+        left: -100px;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background-color: #0b2d4e;
+        opacity: 0.03;
+        z-index: -1;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col relative overflow-x-hidden"
+  >
+    <div class="deco-circle-tr"></div>
+    <div class="deco-circle-bl"></div>
+    <!-- TopNavBar Component -->
+    <nav
+      class="bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline shadow-sm docked full-width top-0 relative z-20"
+    >
+      <div
+        class="flex justify-between items-center w-full px-margin-desktop h-16 max-w-container-max mx-auto"
+      >
+        <!-- Brand / Logo -->
+        <a href="index.html" class="flex items-center gap-4">
+          <img
+            alt="AAJI Logo"
+            class="h-10 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6Qxd7y-bPaPporzQZt7H_frdg4urlXlDwNRwNJc57o3XqUR5sju6lbH0qGayS1XoXy879OtQHCFTVWinhwJU255-769-xESiJgOpcFqSQx4zndDhfJcPvQW4-JR8HunwWGmf3o2rpR1u-O5__OzFo72LtOKLVrSuWgcOzJWxjihFSXM3nXjaAI257-9uFtwilo36Ikr3ZGsp6M9uS7EoL845mr3LTBBpoit8G7AqtphclfDTaBGSUDYppXW_L6OBL07k"
+          />
+          <div class="flex flex-col">
+            <span
+              class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed leading-none"
+              >Sertifikasi Agen Asuransi</span
+            ><span
+              class="text-[11px] text-on-surface-variant uppercase tracking-wider font-semibold mt-1"
+              >Asosiasi Asuransi Jiwa Indonesia</span
+            >
+          </div>
+        </a>
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            class="text-on-surface-variant dark:text-surface-variant text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors"
+            href="index.html"
+            >Beranda</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-surface-variant text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors"
+            href="tentang_alur.html"
+            >Tentang &amp; Alur</a
+          >
+
+          <a
+            class="text-on-surface-variant dark:text-surface-variant text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors"
+            href="kontak.html"
+            >Kontak</a
+          >
+        </div>
+        <!-- Trailing Primary Actions -->
+        <div class="flex items-center gap-4">
+          <a
+            href="register.html"
+            class="border border-outline hover:bg-surface-variant text-on-surface text-label-md font-label-md px-4 py-2 rounded-lg transition-all active:scale-95"
+          >
+            Registrasi
+          </a>
+          <a
+            href="login.html"
+            class="bg-primary-container hover:bg-primary-container/90 text-on-primary text-label-md font-label-md px-6 py-2 rounded-lg shadow-sm transition-all active:scale-95 flex items-center gap-2"
+          >
+            Login
+            <span class="material-symbols-outlined text-[18px]">login</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <main
+      class="flex-grow flex items-center justify-center pt-[80px] pb-24 lg:pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full"
+    >
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 w-full items-center"
+      >
+        <div class="flex flex-col gap-6 order-2 lg:order-1">
+          <div
+            class="inline-flex items-center gap-2 bg-secondary-fixed text-on-secondary-fixed px-3 py-1.5 rounded-full font-label-md text-label-md w-max"
+          >
+            <span class="material-symbols-outlined text-[16px]">lock</span>
+            Area Masuk Terproteksi
+          </div>
+          <h2 class="font-display-lg text-display-lg text-primary">
+            Login Akun Sertifikasi &amp; Ujian AAJI
+          </h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant">
+            Untuk login pastikan anda sudah melakukan aktivasi akun pada email
+            yang dikirimkan setelah proses registrasi aplikasi.
+          </p>
+          <div
+            class="mt-8 rounded-2xl overflow-hidden bg-white p-4 shadow-sm border border-outline-variant max-w-md mx-auto lg:mx-0"
+          >
+            <img
+              class="w-full h-auto object-cover rounded-xl"
+              data-alt="Professional digital illustration for a login page. A global network theme with a large magnifying glass and the bold text 'LOGIN' prominently displayed. The style is modern, corporate, and clean, using a color palette of dark navy (#0B2D4E) and bright blue (#1E7DC2). White background. Matches the aesthetic of a security and certification portal."
+              src="https://lh3.googleusercontent.com/aida/AP1WRLuJsISINOPP7QEuhtG3-vr5sXGhjq1dtGjvuQUgRGPHQtqEvnC50766EuN1Vx7gb0lCJ1iUUXO2W3XBh8F03Thf31M5pCmXQzcWzMMP9uGQ80vXD29qT9eQC8nG9EevWSTmHI8JkrVMiilRB5NbKkd7hthFimKamgkuD_5dEjXy9FJe7gcCvF4ZRTrYSqrshaBt_YEZQq3ELPYlM6ldi44n4KmnRxpwb_QpPJBvtkU9HyQYNLAlGH9ICZE"
+            />
+          </div>
+        </div>
+        <div class="order-1 lg:order-2 w-full max-w-md mx-auto">
+          <div
+            class="bg-surface-container-lowest p-8 rounded-2xl shadow-[0px_4px_12px_rgba(0,0,0,0.05)] border border-outline-variant flex flex-col gap-6 relative z-10"
+          >
+            <div class="flex justify-between items-start mb-2">
+              <div>
+                <h3 class="font-headline-md text-headline-md text-primary">
+                  Form Login Aplikasi
+                </h3>
+                <p
+                  class="font-body-sm text-body-sm text-on-surface-variant mt-1"
+                >
+                  Masukkan kredensial otorisasi Anda
+                </p>
+              </div>
+              <a
+                class="font-label-sm text-label-sm text-secondary hover:underline flex items-center gap-1"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-[16px]">info</span>
+                Lupa Password?
+              </a>
+            </div>
+            <form class="flex flex-col gap-5">
+              <div class="flex flex-col gap-1.5">
+                <label
+                  class="font-label-md text-label-md text-on-surface"
+                  for="email"
+                  >Email anda</label
+                >
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+                  >
+                    <span class="material-symbols-outlined text-outline"
+                      >person</span
+                    >
+                  </div>
+                  <input
+                    class="w-full pl-10 pr-4 py-3 rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface focus:ring-2 focus:ring-secondary-container focus:border-secondary transition-shadow"
+                    id="email"
+                    placeholder="Masukkan email"
+                    type="email"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <label
+                  class="font-label-md text-label-md text-on-surface"
+                  for="password"
+                  >Password</label
+                >
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+                  >
+                    <span class="material-symbols-outlined text-outline"
+                      >lock</span
+                    >
+                  </div>
+                  <input
+                    class="w-full pl-10 pr-4 py-3 rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface focus:ring-2 focus:ring-secondary-container focus:border-secondary transition-shadow tracking-widest"
+                    id="password"
+                    type="password"
+                    value="••••••••"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <label
+                  class="font-label-md text-label-md text-on-surface"
+                  for="captcha"
+                  >Kode Keamanan:</label
+                >
+                <div class="flex gap-4">
+                  <div
+                    class="w-1/3 bg-surface-container-highest rounded-lg flex items-center justify-center relative overflow-hidden select-none border border-outline-variant"
+                  >
+                    <div
+                      class="absolute inset-0 opacity-20"
+                      style="
+                        background-image: repeating-linear-gradient(
+                          45deg,
+                          transparent,
+                          transparent 2px,
+                          #000 2px,
+                          #000 4px
+                        );
+                      "
+                    ></div>
+                    <span
+                      class="font-headline-lg text-headline-lg text-on-surface-variant font-bold tracking-widest z-10 skew-x-[-10deg]"
+                      >7X9K2</span
+                    >
+                  </div>
+                  <input
+                    class="w-2/3 px-4 py-3 rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface focus:ring-2 focus:ring-secondary-container focus:border-secondary transition-shadow"
+                    id="captcha"
+                    placeholder="Ketik kode"
+                    type="text"
+                  />
+                </div>
+              </div>
+              <button
+                class="w-full mt-4 bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md py-4 rounded-lg flex items-center justify-center gap-2 transition-all shadow-sm hover:shadow-md active:scale-[0.98]"
+                type="button"
+              >
+                MASUK PORTAL SERTIFIKASI
+                <span class="material-symbols-outlined">login</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Global Footer -->
+    <footer class="bg-primary dark:bg-primary-container w-full py-8 px-margin-mobile md:px-margin-desktop mt-auto z-20 relative">
+      <div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
+          <span class="text-headline-md font-headline-md font-bold text-on-primary">Sertifikasi Agen Asuransi</span>
+          <p class="font-body-sm text-body-sm text-on-primary/70 dark:text-on-primary-container/70">
+            © 2024 Asosiasi Asuransi Jiwa Indonesia (AAJI). Hak Cipta Dilindungi Undang-Undang.
+          </p>
+        </div>
+        <div class="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8">
+          <a class="font-body-sm text-body-sm text-on-primary/90 dark:text-on-primary-container/90 hover:text-secondary-fixed transition-colors" href="#">Kebijakan Privasi</a>
+          <a class="font-body-sm text-body-sm text-on-primary/90 dark:text-on-primary-container/90 hover:text-secondary-fixed transition-colors" href="#">Syarat &amp; Ketentuan</a>
+          <a class="font-body-sm text-body-sm text-on-primary/90 dark:text-on-primary-container/90 hover:text-secondary-fixed transition-colors" href="#">Pusat Bantuan</a>
+          <a class="font-body-sm text-body-sm text-on-primary/90 dark:text-on-primary-container/90 hover:text-secondary-fixed transition-colors" href="#">Peta Situs</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          let loginAttempts = 0;
+          const maxAttempts = 3;
+          const form = document.querySelector('form');
+          const emailInput = document.getElementById('email');
+          const passwordInput = document.getElementById('password');
+          const submitBtn = form.querySelector('button[type="button"]');
+
+          const warningDiv = document.createElement('div');
+          warningDiv.className = 'hidden bg-error-container text-on-error-container p-4 rounded-lg mb-4 text-sm font-medium border border-error/20 flex items-center gap-2';
+          form.insertBefore(warningDiv, form.firstChild);
+
+          function showWarning(msg) {
+              warningDiv.innerHTML = `<span class="material-symbols-outlined">warning</span> ${msg}`;
+              warningDiv.classList.remove('hidden');
+          }
+
+          submitBtn.addEventListener('click', (e) => {
+              e.preventDefault();
+              loginAttempts++;
+              if (loginAttempts >= maxAttempts) {
+                  showWarning('Anda telah gagal login beberapa kali. Akun Anda sementara dikunci demi keamanan. Silakan hubungi admin atau gunakan fitur Lupa Password.');
+                  submitBtn.disabled = true;
+                  submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+              } else {
+                  if (!emailInput.value || !passwordInput.value) {
+                      showWarning('Email dan Password tidak boleh kosong.');
+                  } else {
+                      showWarning(`Password salah. Sisa percobaan: ${maxAttempts - loginAttempts}`);
+                  }
+              }
+          });
+      });
+    </script>
+  </body>
+</html>

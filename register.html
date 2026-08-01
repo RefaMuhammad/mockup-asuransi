@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="id" style="">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Registrasi Akun - AAJI Sertifikasi</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+    </style>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              outline: "#73777f",
+              "on-surface": "#191c1d",
+              surface: "#f8f9fa",
+              "on-background": "#191c1d",
+              "on-tertiary-fixed-variant": "#5d4200",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-highest": "#e1e3e4",
+              "on-tertiary-fixed": "#271900",
+              "surface-container": "#edeeef",
+              "primary-container": "#0b2d4e",
+              "surface-variant": "#e1e3e4",
+              error: "#ba1a1a",
+              "surface-dim": "#d9dadb",
+              "on-secondary": "#ffffff",
+              "inverse-on-surface": "#f0f1f2",
+              "tertiary-fixed-dim": "#f7bd48",
+              "primary-fixed": "#d2e4ff",
+              primary: "#001831",
+              "on-primary-fixed-variant": "#2b486b",
+              "surface-container-high": "#e7e8e9",
+              "tertiary-fixed": "#ffdea6",
+              "on-error": "#ffffff",
+              "on-primary-container": "#7995bc",
+              "on-primary": "#ffffff",
+              secondary: "#00629e",
+              "surface-bright": "#f8f9fa",
+              "secondary-fixed": "#cfe5ff",
+              "primary-fixed-dim": "#acc9f1",
+              "on-tertiary": "#ffffff",
+              "on-surface-variant": "#43474e",
+              "surface-tint": "#446084",
+              "on-tertiary-container": "#bd8b13",
+              "secondary-fixed-dim": "#9acbff",
+              tertiary: "#221500",
+              "secondary-container": "#67b6ff",
+              "on-primary-fixed": "#001c38",
+              "on-secondary-fixed": "#001d34",
+              "outline-variant": "#c3c6cf",
+              "error-container": "#ffdad6",
+              background: "#f8f9fa",
+              "on-error-container": "#93000a",
+              "inverse-primary": "#acc9f1",
+              "surface-container-low": "#f3f4f5",
+              "on-secondary-fixed-variant": "#004a78",
+              "inverse-surface": "#2e3132",
+              "tertiary-container": "#3c2900",
+              "on-secondary-container": "#004673",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              base: "8px",
+              "margin-desktop": "32px",
+              "container-max": "1280px",
+              "margin-mobile": "16px",
+              gutter: "24px",
+              "sidebar-width": "280px",
+            },
+            fontFamily: {
+              "body-md": ["Manrope"],
+              "body-sm": ["Manrope"],
+              "headline-lg": ["Manrope"],
+              "label-sm": ["Manrope"],
+              "headline-md": ["Manrope"],
+              "headline-lg-mobile": ["Manrope"],
+              "body-lg": ["Manrope"],
+              "label-md": ["Manrope"],
+              "display-lg": ["Manrope"],
+            },
+            fontSize: {
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+              "headline-lg": [
+                "32px",
+                { lineHeight: "40px", fontWeight: "700" },
+              ],
+              "label-sm": ["12px", { lineHeight: "16px", fontWeight: "600" }],
+              "headline-md": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "headline-lg-mobile": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "700" },
+              ],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "label-md": [
+                "14px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "display-lg": [
+                "48px",
+                {
+                  lineHeight: "56px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col overflow-x-hidden relative"
+  >
+    <!-- Background Decorative Elements -->
+    <div
+      class="fixed top-[-10%] right-[-5%] w-[400px] h-[400px] rounded-full bg-secondary/10 pointer-events-none -z-10 blur-3xl"
+    ></div>
+    <div
+      class="fixed bottom-[-10%] left-[-5%] w-[500px] h-[500px] rounded-full bg-primary-container/10 pointer-events-none -z-10 blur-3xl"
+    ></div>
+    <!-- TopNavBar Component -->
+    <nav
+      class="bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline shadow-sm docked full-width top-0 relative z-20"
+    >
+      <div
+        class="flex justify-between items-center w-full px-margin-desktop h-16 max-w-container-max mx-auto"
+      >
+        <!-- Brand / Logo -->
+        <a href="index.html" class="flex items-center gap-4">
+          <img
+            alt="AAJI Logo"
+            class="h-10 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6Qxd7y-bPaPporzQZt7H_frdg4urlXlDwNRwNJc57o3XqUR5sju6lbH0qGayS1XoXy879OtQHCFTVWinhwJU255-769-xESiJgOpcFqSQx4zndDhfJcPvQW4-JR8HunwWGmf3o2rpR1u-O5__OzFo72LtOKLVrSuWgcOzJWxjihFSXM3nXjaAI257-9uFtwilo36Ikr3ZGsp6M9uS7EoL845mr3LTBBpoit8G7AqtphclfDTaBGSUDYppXW_L6OBL07k"
+          />
+          <div class="flex flex-col">
+            <span
+              class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed leading-none"
+              >Sertifikasi Agen Asuransi</span
+            ><span
+              class="text-[11px] text-on-surface-variant uppercase tracking-wider font-semibold mt-1"
+              >Asosiasi Asuransi Jiwa Indonesia</span
+            >
+          </div>
+        </a>
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            class="text-on-surface-variant dark:text-surface-variant text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors"
+            href="index.html"
+            >Beranda</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-surface-variant text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors"
+            href="tentang_alur.html"
+            >Tentang &amp; Alur</a
+          >
+
+          <a
+            class="text-on-surface-variant dark:text-surface-variant text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors"
+            href="kontak.html"
+            >Kontak</a
+          >
+        </div>
+        <!-- Trailing Primary Actions -->
+        <div class="flex items-center gap-4">
+          <a
+            href="register.html"
+            class="border border-outline hover:bg-surface-variant text-on-surface text-label-md font-label-md px-4 py-2 rounded-lg transition-all active:scale-95"
+          >
+            Registrasi
+          </a>
+          <a
+            href="login.html"
+            class="bg-primary-container hover:bg-primary-container/90 text-on-primary text-label-md font-label-md px-6 py-2 rounded-lg shadow-sm transition-all active:scale-95 flex items-center gap-2"
+          >
+            Login
+            <span class="material-symbols-outlined text-[18px]">login</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- Main Content Area -->
+    <main
+      class="flex-grow flex items-center justify-center px-margin-mobile md:px-margin-desktop pt-24 pb-24 lg:pb-32 w-full max-w-container-max mx-auto"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 w-full items-center">
+        <!-- Left Column: Branding & Info -->
+        <div class="flex flex-col gap-6">
+          <div
+            class="inline-flex items-center gap-2 bg-secondary-fixed/50 text-on-secondary-container px-4 py-2 rounded-full w-fit"
+          >
+            <span class="material-symbols-outlined text-[18px]">lock</span>
+            <span class="font-label-sm">Area Registrasi Terproteksi</span>
+          </div>
+          <h2 class="text-headline-lg font-headline-lg text-primary max-w-md">
+            Registrasi Akun Sertifikasi &amp; Ujian AAJI
+          </h2>
+          <p class="text-body-lg text-on-surface-variant max-w-md">
+            Gunakan Email terdaftar yang didaftarkan Perusahaan anda untuk
+            registrasi ke aplikasi ini.
+          </p>
+          <div
+            class="mt-8 rounded-2xl overflow-hidden shadow-lg border border-outline-variant/30 max-w-[400px]"
+          >
+            <img
+              alt="Keamanan Siber"
+              class="w-full h-auto object-cover aspect-video"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVuE68hEVLTlOS3jJrSzGnzZljER74foZxNCKbX_4n39_e9Di0CnT0fGGm63cOW6r_aLjNoXG_EueIkehF3KBpxl8d7hV6tqDdkdCiCrCwf5tHoFKbvFT-rM6eNTDsgtf4qF6P1dqR9H-4yK4QgaKkalsMQRe06PMbDbo85F2_T-o3_mwZ1PForaowdtIOkvyZFSdsil_X7wtMGhVWcbiJ6_MK_Rx59Md9omTwN_9XG5696q_wBpu6hw"
+            />
+          </div>
+        </div>
+        <!-- Right Column: Registration Form Card -->
+        <div
+          class="bg-surface-container-lowest p-8 rounded-2xl shadow-[0px_10px_25px_rgba(11,45,78,0.1)] border border-outline-variant/50 w-full max-w-md mx-auto"
+        >
+          <div class="mb-8">
+            <h3 class="text-headline-md font-headline-md text-primary mb-2">
+              Form Registrasi Aplikasi
+            </h3>
+            <a class="text-label-sm text-secondary hover:underline" href="#"
+              >Lupa Password?</a
+            >
+          </div>
+          <form class="flex flex-col gap-5">
+            <!-- Field 1: Email -->
+            <div>
+              <label class="block text-label-md text-on-surface-variant mb-1"
+                >Your email</label
+              >
+              <div class="relative">
+                <span
+                  class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+                >
+                  <span class="material-symbols-outlined text-outline"
+                    >person</span
+                  >
+                </span>
+                <input
+                  class="w-full pl-10 pr-4 py-3 bg-surface border border-outline-variant rounded-lg focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all outline-none font-body-sm text-on-surface"
+                  placeholder="Contoh: email@perusahaan.com"
+                  type="email"
+                />
+              </div>
+            </div>
+            <!-- Field 2: Password -->
+            <div>
+              <label class="block text-label-md text-on-surface-variant mb-1"
+                >Type Password</label
+              >
+              <input
+                class="w-full px-4 py-3 bg-surface border border-outline-variant rounded-lg focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all outline-none font-body-sm text-on-surface"
+                type="password"
+              />
+            </div>
+            <!-- Field 3: Re-type Password -->
+            <div>
+              <label class="block text-label-md text-on-surface-variant mb-1"
+                >Re-Type Password</label
+              >
+              <input
+                class="w-full px-4 py-3 bg-surface border border-outline-variant rounded-lg focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all outline-none font-body-sm text-on-surface"
+                type="password"
+                value="secretpassword"
+              />
+            </div>
+            <!-- Field 4: Security Code (Captcha) -->
+            <div>
+              <label class="block text-label-md text-on-surface-variant mb-1"
+                >Security code</label
+              >
+              <div class="flex gap-4 items-center">
+                <div
+                  class="bg-surface-variant border border-outline-variant rounded-lg px-4 py-3 font-mono text-lg font-bold tracking-widest text-primary-container relative overflow-hidden select-none w-32 text-center decoration-wavy line-through decoration-secondary/50"
+                >
+                  7X9K2
+                  <div
+                    class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPjxyZWN0IHdpZHRoPSI0IiBoZWlnaHQ9IjQiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMSIvPjxwYXRoIGQ9Ik0wIDRMMCAwTDIgMkw0IDBMNCA0IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjEiLz48L3N2Zz4=')] opacity-50"
+                  ></div>
+                </div>
+                <input
+                  class="flex-1 px-4 py-3 bg-surface border border-outline-variant rounded-lg focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all outline-none font-body-sm text-on-surface uppercase"
+                  placeholder="Enter code"
+                  type="text"
+                />
+              </div>
+            </div>
+            <!-- Actions -->
+            <div class="flex flex-col gap-3 mt-4">
+              <button
+                class="w-full bg-primary text-on-primary py-3 rounded-lg font-label-md hover:bg-on-primary-fixed-variant transition-colors shadow-sm flex justify-center items-center gap-2"
+                type="button"
+              >
+                Registration
+              </button>
+              <button
+                class="w-full bg-surface-container-high text-on-surface py-3 rounded-lg font-label-md hover:bg-surface-dim transition-colors border border-outline-variant/50 flex justify-center items-center gap-2"
+                type="button"
+              >
+                Re-Send Email Aktivasi
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <!-- Global Footer -->
+    <footer class="bg-primary dark:bg-primary-container w-full py-8 px-margin-mobile md:px-margin-desktop mt-auto z-20 relative">
+      <div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
+          <span class="text-headline-md font-headline-md font-bold text-on-primary">Sertifikasi Agen Asuransi</span>
+          <p class="font-body-sm text-body-sm text-on-primary/70 dark:text-on-primary-container/70">
+            © 2024 Asosiasi Asuransi Jiwa Indonesia (AAJI). Hak Cipta Dilindungi Undang-Undang.
+          </p>
+        </div>
+        <div class="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8">
+          <a class="font-body-sm text-body-sm text-on-primary/90 dark:text-on-primary-container/90 hover:text-secondary-fixed transition-colors" href="#">Kebijakan Privasi</a>
+          <a class="font-body-sm text-body-sm text-on-primary/90 dark:text-on-primary-container/90 hover:text-secondary-fixed transition-colors" href="#">Syarat &amp; Ketentuan</a>
+          <a class="font-body-sm text-body-sm text-on-primary/90 dark:text-on-primary-container/90 hover:text-secondary-fixed transition-colors" href="#">Pusat Bantuan</a>
+          <a class="font-body-sm text-body-sm text-on-primary/90 dark:text-on-primary-container/90 hover:text-secondary-fixed transition-colors" href="#">Peta Situs</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const form = document.querySelector('form');
+          const emailInput = form.querySelector('input[type="email"]');
+          const submitBtn = form.querySelectorAll('button')[0];
+          
+          // Create warning banner
+          const warningDiv = document.createElement('div');
+          warningDiv.className = 'hidden bg-error-container text-on-error-container p-4 rounded-lg mb-4 text-sm font-medium border border-error/20 flex items-center gap-2';
+          form.insertBefore(warningDiv, form.firstChild);
+
+          function showWarning(msg) {
+              warningDiv.innerHTML = `<span class="material-symbols-outlined">warning</span> ${msg}`;
+              warningDiv.classList.remove('hidden');
+              warningDiv.classList.add('animate-pulse');
+              setTimeout(() => warningDiv.classList.remove('animate-pulse'), 1000);
+          }
+
+          submitBtn.addEventListener('click', (e) => {
+              e.preventDefault();
+              
+              // Mocking check email already registered
+              const dummyRegisteredEmails = ['admin@aaji.or.id', 'test@test.com', 'email@perusahaan.com'];
+              
+              if (!emailInput.value) {
+                  showWarning('Silakan masukkan email Anda.');
+                  return;
+              }
+
+              if (dummyRegisteredEmails.includes(emailInput.value.toLowerCase())) {
+                  showWarning('Email tersebut sudah pernah teregistrasi. Silakan gunakan email lain atau Login.');
+              } else {
+                  // Redirect to confirm page
+                  window.location.href = 'konfirmasi_register.html';
+              }
+          });
+      });
+    </script>
+  </body>
+</html>

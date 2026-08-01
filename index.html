@@ -1,0 +1,348 @@
+<!doctype html>
+<html class="light" lang="en" style="">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AAJI Insurance Agent Certification Portal</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#5d4200",
+              surface: "#f8f9fa",
+              "on-secondary-container": "#004673",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary": "#ffffff",
+              "secondary-fixed-dim": "#9acbff",
+              "surface-dim": "#d9dadb",
+              "primary-fixed-dim": "#acc9f1",
+              "on-primary-container": "#7995bc",
+              "tertiary-container": "#3c2900",
+              "on-background": "#191c1d",
+              background: "#f8f9fa",
+              "on-error-container": "#93000a",
+              "on-tertiary-container": "#bd8b13",
+              "primary-container": "#0b2d4e",
+              primary: "#001831",
+              "on-secondary-fixed": "#001d34",
+              "on-tertiary-fixed": "#271900",
+              "on-surface-variant": "#43474e",
+              "surface-container-high": "#e7e8e9",
+              error: "#ba1a1a",
+              "outline-variant": "#c3c6cf",
+              secondary: "#00629e",
+              "error-container": "#ffdad6",
+              "on-error": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "surface-container": "#edeeef",
+              "inverse-primary": "#acc9f1",
+              "tertiary-fixed-dim": "#f7bd48",
+              tertiary: "#221500",
+              "primary-fixed": "#d2e4ff",
+              "surface-container-highest": "#e1e3e4",
+              "inverse-on-surface": "#f0f1f2",
+              "inverse-surface": "#2e3132",
+              "on-primary": "#ffffff",
+              "tertiary-fixed": "#ffdea6",
+              "surface-container-low": "#f3f4f5",
+              "on-secondary-fixed-variant": "#004a78",
+              "surface-bright": "#f8f9fa",
+              "on-surface": "#191c1d",
+              "surface-variant": "#e1e3e4",
+              outline: "#73777f",
+              "surface-tint": "#446084",
+              "on-primary-fixed-variant": "#2b486b",
+              "secondary-container": "#67b6ff",
+              "secondary-fixed": "#cfe5ff",
+              "on-primary-fixed": "#001c38",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              gutter: "24px",
+              base: "8px",
+              "margin-desktop": "32px",
+              "container-max": "1280px",
+              "margin-mobile": "16px",
+              "sidebar-width": "280px",
+            },
+            fontFamily: {
+              "label-sm": ["Manrope"],
+              "display-lg": ["Manrope"],
+              "body-lg": ["Manrope"],
+              "label-md": ["Manrope"],
+              "headline-md": ["Manrope"],
+              "body-md": ["Manrope"],
+              "body-sm": ["Manrope"],
+              "headline-lg": ["Manrope"],
+              "headline-lg-mobile": ["Manrope"],
+            },
+            fontSize: {
+              "label-sm": ["12px", { lineHeight: "16px", fontWeight: "600" }],
+              "display-lg": [
+                "48px",
+                {
+                  lineHeight: "56px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "label-md": [
+                "14px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-md": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+              "headline-lg": [
+                "32px",
+                { lineHeight: "40px", fontWeight: "700" },
+              ],
+              "headline-lg-mobile": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "700" },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Manrope", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-surface relative min-h-screen flex flex-col overflow-x-hidden"
+  >
+    <!-- Decorative Semi-circles -->
+    <div
+      class="fixed top-0 right-0 w-96 h-96 bg-secondary opacity-10 rounded-bl-full -mr-16 -mt-16 pointer-events-none z-0"
+    ></div>
+    <div
+      class="fixed bottom-0 left-0 w-[500px] h-[500px] bg-primary-container opacity-5 rounded-tr-full -ml-32 -mb-32 pointer-events-none z-0"
+    ></div>
+    <!-- TopNavBar Component -->
+    <nav
+      class="bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline shadow-sm docked full-width top-0 relative z-20"
+    >
+      <div
+        class="flex justify-between items-center w-full px-margin-desktop h-16 max-w-container-max mx-auto"
+      >
+        <!-- Brand / Logo -->
+        <a href="index.html" class="flex items-center gap-4">
+          <img
+            alt="AAJI Logo"
+            class="h-10 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6Qxd7y-bPaPporzQZt7H_frdg4urlXlDwNRwNJc57o3XqUR5sju6lbH0qGayS1XoXy879OtQHCFTVWinhwJU255-769-xESiJgOpcFqSQx4zndDhfJcPvQW4-JR8HunwWGmf3o2rpR1u-O5__OzFo72LtOKLVrSuWgcOzJWxjihFSXM3nXjaAI257-9uFtwilo36Ikr3ZGsp6M9uS7EoL845mr3LTBBpoit8G7AqtphclfDTaBGSUDYppXW_L6OBL07k"
+          />
+          <div class="flex flex-col">
+            <span
+              class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed leading-none"
+              >Sertifikasi Agen Asuransi</span
+            ><span
+              class="text-[11px] text-on-surface-variant uppercase tracking-wider font-semibold mt-1"
+              >Asosiasi Asuransi Jiwa Indonesia</span
+            >
+          </div>
+        </a>
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            class="text-secondary dark:text-secondary-fixed-dim border-b-2 border-secondary font-bold pb-1 text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors"
+            href="index.html"
+            >Beranda</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-surface-variant text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors"
+            href="tentang_alur.html"
+            >Tentang &amp; Alur</a
+          >
+
+          <a
+            class="text-on-surface-variant dark:text-surface-variant text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors"
+            href="kontak.html"
+            >Kontak</a
+          >
+        </div>
+        <!-- Trailing Primary Actions -->
+        <div class="flex items-center gap-4">
+          <a
+            href="register.html"
+            class="border border-outline hover:bg-surface-variant text-on-surface text-label-md font-label-md px-4 py-2 rounded-lg transition-all active:scale-95"
+          >
+            Registrasi
+          </a>
+          <a
+            href="login.html"
+            class="bg-primary-container hover:bg-primary-container/90 text-on-primary text-label-md font-label-md px-6 py-2 rounded-lg shadow-sm transition-all active:scale-95 flex items-center gap-2"
+          >
+            Login
+            <span class="material-symbols-outlined text-[18px]">login</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- Main Content Area -->
+    <main
+      class="flex-1 max-w-container-max mx-auto px-margin-desktop py-16 lg:pt-24 lg:pb-32 relative z-10 w-full flex"
+    >
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-gutter items-center my-auto"
+      >
+        <!-- Left Column: Hero Content -->
+        <div class="flex flex-col space-y-8">
+          <!-- Small Banner -->
+          <div
+            class="inline-flex items-center gap-2 bg-secondary-fixed/50 border border-secondary-fixed-dim text-on-secondary-container px-4 py-2 rounded-full w-max shadow-sm backdrop-blur-sm"
+          >
+            <span class="material-symbols-outlined text-[18px] text-secondary"
+              >language</span
+            >
+            <span class="font-label-md text-label-md"
+              >Portal Resmi Sertifikasi Agen Asuransi</span
+            >
+          </div>
+          <!-- Typography -->
+          <div class="space-y-4">
+            <h1 class="font-display-lg text-display-lg text-primary">
+              Ujian Sertifikasi <br />
+              <span class="text-secondary">Keagenan Asuransi</span> Jiwa
+              Nasional
+            </h1>
+            <p
+              class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed"
+            >
+              Selamat datang di portal resmi penyelenggaraan Sertifikasi dan
+              Ujian Lisensi Keagenan Asuransi AAJI untuk agen asuransi
+              profesional.
+            </p>
+          </div>
+          <!-- Alert Box -->
+          <div
+            class="bg-primary-fixed/30 border-l-4 border-secondary p-5 rounded-r-xl shadow-sm flex gap-4 items-start max-w-xl"
+          >
+            <span class="material-symbols-outlined text-secondary mt-0.5"
+              >warning</span
+            >
+            <div>
+              <h3
+                class="font-label-md text-label-md text-primary font-bold mb-1 uppercase"
+              >
+                PETUNJUK PENTING REGISTRASI:
+              </h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">
+                Untuk mengikuti program sertifikasi, Anda harus terdaftar
+                sebagai agen Perusahaan Asuransi tempat Anda bergabung dan
+                melakukan registrasi/login di website ini.
+              </p>
+            </div>
+          </div>
+          <!-- CTA Action -->
+          <div class="pt-4">
+            <a
+              href="tentang_alur.html"
+              class="bg-primary-container text-on-primary hover:bg-primary-container/90 px-8 py-3.5 rounded-lg shadow-md font-label-md text-label-md flex items-center gap-2 transition-all active:scale-95 w-max"
+            >
+              Panduan Otorisasi
+              <span class="material-symbols-outlined text-[18px]"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
+        </div>
+        <!-- Right Column: Hero Image (Bento/Glassmorphism style framing) -->
+        <div
+          class="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-outline-variant/30 group lg:h-full"
+        >
+          <!-- Abstract layered background for depth behind the image -->
+          <div
+            class="absolute inset-0 bg-gradient-to-tr from-primary-container/10 to-secondary-container/10"
+          ></div>
+          <!-- Main Image -->
+          <div
+            class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+            data-alt="A highly professional corporate photograph of two business individuals in formal attire shaking hands warmly across a sleek meeting table in a brightly lit, modern high-rise office. The lighting is high-key natural daylight creating a clean, optimistic mood. The aesthetic is modern corporate, employing a subtle color palette of cool grays, pristine whites, and deep navy blue suits, perfectly aligning with a trustworthy financial or insurance institution. The background features slightly blurred glass partitions and minimalist office decor."
+            style="
+              background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDhvIWPoNVwmCwH1zOxC5HFomjPh7ptbJcZIRnlNvQRFwaZZO320hjnaYU39VQxO3sNc-klPlIWhGuoI4Nfpfi5QUhqb4WaKMoxLHU3TYca4nAtI8SlKM9la7eW3aoomNcnxXR8GHCyTX10AOfmy9yFlicyFQfsDYU9tqmO8c2yPYO55Ggs_yrD10k8wBLOU_qG3k6YUX6ZHolTYug6OY_QG1g4lRdN3JesC13lrmwITHklRDkJE9ttQQ&quot;);
+            "
+          ></div>
+          <!-- Floating Glassmorphism Status Card -->
+          <div
+            class="absolute bottom-8 left-8 right-8 bg-surface/80 backdrop-blur-md border border-white/40 p-4 rounded-xl shadow-lg flex items-center justify-between"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="bg-secondary p-3 rounded-lg text-on-secondary shadow-sm"
+              >
+                <span class="material-symbols-outlined">verified_user</span>
+              </div>
+              <div>
+                <h4 class="font-label-md text-label-md text-primary">
+                  Sertifikasi Resmi AAJI
+                </h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Terpercaya &amp; Diakui Nasional
+                </p>
+              </div>
+            </div>
+            <a
+              href="login.html"
+              class="hidden sm:flex items-center text-secondary font-label-sm text-label-sm hover:underline"
+            >
+              Cek Status
+              <span class="material-symbols-outlined text-[16px] ml-1"
+                >chevron_right</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Global Footer -->
+    <footer class="bg-primary dark:bg-primary-container w-full py-8 px-margin-mobile md:px-margin-desktop mt-auto z-20 relative">
+      <div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
+          <span class="text-headline-md font-headline-md font-bold text-on-primary">Sertifikasi Agen Asuransi</span>
+          <p class="font-body-sm text-body-sm text-on-primary/70 dark:text-on-primary-container/70">
+            © 2024 Asosiasi Asuransi Jiwa Indonesia (AAJI). Hak Cipta Dilindungi Undang-Undang.
+          </p>
+        </div>
+        <div class="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8">
+          <a class="font-body-sm text-body-sm text-on-primary/90 dark:text-on-primary-container/90 hover:text-secondary-fixed transition-colors" href="#">Kebijakan Privasi</a>
+          <a class="font-body-sm text-body-sm text-on-primary/90 dark:text-on-primary-container/90 hover:text-secondary-fixed transition-colors" href="#">Syarat &amp; Ketentuan</a>
+          <a class="font-body-sm text-body-sm text-on-primary/90 dark:text-on-primary-container/90 hover:text-secondary-fixed transition-colors" href="#">Pusat Bantuan</a>
+          <a class="font-body-sm text-body-sm text-on-primary/90 dark:text-on-primary-container/90 hover:text-secondary-fixed transition-colors" href="#">Peta Situs</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="id" style="">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Tentang &amp; Alur - Sertifikasi Agen Asuransi AAJI</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed": "#001c38",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed": "#001d34",
+              "on-primary-container": "#7995bc",
+              error: "#ba1a1a",
+              "inverse-primary": "#acc9f1",
+              "surface-tint": "#446084",
+              "surface-container-lowest": "#ffffff",
+              surface: "#f8f9fa",
+              "on-tertiary-container": "#bd8b13",
+              "secondary-fixed-dim": "#9acbff",
+              "on-secondary-fixed-variant": "#004a78",
+              "on-surface": "#191c1d",
+              "surface-container-highest": "#e1e3e4",
+              "tertiary-fixed-dim": "#f7bd48",
+              "surface-dim": "#d9dadb",
+              "surface-container-low": "#f3f4f5",
+              "on-tertiary-fixed": "#271900",
+              "on-surface-variant": "#43474e",
+              "surface-variant": "#e1e3e4",
+              "on-primary": "#ffffff",
+              "primary-fixed-dim": "#acc9f1",
+              "on-secondary": "#ffffff",
+              "on-error": "#ffffff",
+              tertiary: "#221500",
+              primary: "#001831",
+              background: "#f8f9fa",
+              "primary-container": "#0b2d4e",
+              "outline-variant": "#c3c6cf",
+              "on-error-container": "#93000a",
+              "inverse-on-surface": "#f0f1f2",
+              "on-tertiary-fixed-variant": "#5d4200",
+              "error-container": "#ffdad6",
+              "tertiary-fixed": "#ffdea6",
+              "surface-bright": "#f8f9fa",
+              "on-secondary-container": "#004673",
+              "secondary-container": "#67b6ff",
+              "on-background": "#191c1d",
+              "inverse-surface": "#2e3132",
+              "surface-container": "#edeeef",
+              "secondary-fixed": "#cfe5ff",
+              "primary-fixed": "#d2e4ff",
+              outline: "#73777f",
+              "surface-container-high": "#e7e8e9",
+              secondary: "#00629e",
+              "tertiary-container": "#3c2900",
+              "on-primary-fixed-variant": "#2b486b",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              gutter: "24px",
+              "margin-mobile": "16px",
+              "container-max": "1280px",
+              base: "8px",
+              "margin-desktop": "32px",
+              "sidebar-width": "280px",
+            },
+            fontFamily: {
+              "label-md": ["Manrope"],
+              "body-sm": ["Manrope"],
+              "display-lg": ["Manrope"],
+              "headline-lg-mobile": ["Manrope"],
+              "headline-md": ["Manrope"],
+              "headline-lg": ["Manrope"],
+              "body-lg": ["Manrope"],
+              "label-sm": ["Manrope"],
+              "body-md": ["Manrope"],
+            },
+            fontSize: {
+              "label-md": [
+                "14px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+              "display-lg": [
+                "48px",
+                {
+                  lineHeight: "56px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-lg-mobile": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "700" },
+              ],
+              "headline-md": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "headline-lg": [
+                "32px",
+                { lineHeight: "40px", fontWeight: "700" },
+              ],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "label-sm": ["12px", { lineHeight: "16px", fontWeight: "600" }],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col relative overflow-x-hidden"
+  >
+    <!-- Decorative Circles -->
+    <div
+      class="absolute -top-32 -right-32 w-96 h-96 bg-secondary-container rounded-full opacity-30 blur-3xl z-0 pointer-events-none"
+    ></div>
+    <div
+      class="absolute top-1/2 -left-48 w-[500px] h-[500px] bg-primary-container rounded-full opacity-10 blur-3xl z-0 pointer-events-none"
+    ></div>
+    <!-- TopNavBar Component -->
+    <nav
+      class="bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline shadow-sm docked full-width top-0 relative z-20"
+    >
+      <div
+        class="flex justify-between items-center w-full px-margin-desktop h-16 max-w-container-max mx-auto"
+      >
+        <!-- Brand / Logo -->
+        <a href="index.html" class="flex items-center gap-4">
+          <img
+            alt="AAJI Logo"
+            class="h-10 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6Qxd7y-bPaPporzQZt7H_frdg4urlXlDwNRwNJc57o3XqUR5sju6lbH0qGayS1XoXy879OtQHCFTVWinhwJU255-769-xESiJgOpcFqSQx4zndDhfJcPvQW4-JR8HunwWGmf3o2rpR1u-O5__OzFo72LtOKLVrSuWgcOzJWxjihFSXM3nXjaAI257-9uFtwilo36Ikr3ZGsp6M9uS7EoL845mr3LTBBpoit8G7AqtphclfDTaBGSUDYppXW_L6OBL07k"
+          />
+          <div class="flex flex-col">
+            <span
+              class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed leading-none"
+              >Sertifikasi Agen Asuransi</span
+            ><span
+              class="text-[11px] text-on-surface-variant uppercase tracking-wider font-semibold mt-1"
+              >Asosiasi Asuransi Jiwa Indonesia</span
+            >
+          </div>
+        </a>
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            class="text-on-surface-variant dark:text-surface-variant text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors"
+            href="index.html"
+            >Beranda</a
+          >
+          <a
+            class="text-secondary dark:text-secondary-fixed-dim border-b-2 border-secondary font-bold pb-1 text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors"
+            href="tentang_alur.html"
+            >Tentang &amp; Alur</a
+          >
+
+          <a
+            class="text-on-surface-variant dark:text-surface-variant text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors"
+            href="kontak.html"
+            >Kontak</a
+          >
+        </div>
+        <!-- Trailing Primary Actions -->
+        <div class="flex items-center gap-4">
+          <a
+            href="register.html"
+            class="border border-outline hover:bg-surface-variant text-on-surface text-label-md font-label-md px-4 py-2 rounded-lg transition-all active:scale-95"
+          >
+            Registrasi
+          </a>
+          <a
+            href="login.html"
+            class="bg-primary-container hover:bg-primary-container/90 text-on-primary text-label-md font-label-md px-6 py-2 rounded-lg shadow-sm transition-all active:scale-95 flex items-center gap-2"
+          >
+            Login
+            <span class="material-symbols-outlined text-[18px]">login</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- Main Content Canvas -->
+    <main
+      class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 pb-24 lg:pb-32 relative z-10 flex flex-col justify-center"
+    >
+      <!-- Header Section -->
+      <div class="text-center mb-16 max-w-3xl mx-auto">
+        <h1
+          class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4"
+        >
+          Alur Pendaftaran &amp; Persyaratan Sertifikasi
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant">
+          Mekanisme terintegrasi pendaftaran calon agen melalui Perusahaan
+          Asuransi Jiwa
+        </p>
+      </div>
+      <!-- Stepper Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-20 relative">
+        <!-- Connecting Line for Desktop -->
+        <div
+          class="hidden md:block absolute top-8 left-1/2 -translate-x-1/2 w-[75%] h-0.5 bg-outline-variant/30 z-0"
+        ></div>
+        <!-- Step 1 -->
+        <div
+          class="bg-surface-container-lowest border border-outline-variant/50 p-6 rounded-xl shadow-sm relative z-10 flex flex-col items-center text-center transition-transform hover:-translate-y-1 duration-300"
+        >
+          <div
+            class="w-16 h-16 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center font-headline-md text-headline-md font-bold mb-6 border-4 border-surface shadow-sm"
+          >
+            1
+          </div>
+          <h3 class="font-label-md text-label-md text-primary mb-3">
+            Pendaftaran Aplikasi
+          </h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            Agen mengakses portal web ini, melakukan registrasi ke aplikasi dan
+            aktivasi akun agar dapat login.
+          </p>
+        </div>
+        <!-- Step 2 -->
+        <div
+          class="bg-surface-container-lowest border-2 border-secondary p-6 rounded-xl shadow-md relative z-10 flex flex-col items-center text-center transition-transform hover:-translate-y-1 duration-300"
+        >
+          <div
+            class="w-16 h-16 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center font-headline-md text-headline-md font-bold mb-6 border-4 border-surface shadow-sm"
+          >
+            2
+          </div>
+          <h3 class="font-label-md text-label-md text-primary mb-3">
+            Registrasi Program Sertifikasi
+          </h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            Agen melengkapi data di aplikasi sesuai urutan petunjuk pengisian
+            data.
+          </p>
+        </div>
+        <!-- Step 3 -->
+        <div
+          class="bg-surface-container-lowest border border-outline-variant/50 p-6 rounded-xl shadow-sm relative z-10 flex flex-col items-center text-center transition-transform hover:-translate-y-1 duration-300"
+        >
+          <div
+            class="w-16 h-16 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center font-headline-md text-headline-md font-bold mb-6 border-4 border-surface shadow-sm"
+          >
+            3
+          </div>
+          <h3 class="font-label-md text-label-md text-primary mb-3">
+            Persetujuan Perusahaan dan AAJI
+          </h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            Pihak Perusahaan dan AAJI akan melakukan persetujuan registrasi
+            program sertifikasi.
+          </p>
+        </div>
+        <!-- Step 4 -->
+        <div
+          class="bg-surface-container-lowest border-2 border-secondary p-6 rounded-xl shadow-md relative z-10 flex flex-col items-center text-center transition-transform hover:-translate-y-1 duration-300"
+        >
+          <div
+            class="w-16 h-16 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center font-headline-md text-headline-md font-bold mb-6 border-4 border-surface shadow-sm"
+          >
+            4
+          </div>
+          <h3 class="font-label-md text-label-md text-primary mb-3">
+            Pelaksanaan Ujian &amp; E-License
+          </h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            LSP akan memberikan jadwal dan media online untuk pelaksanaan ujian
+            &amp; E-Licensi.
+          </p>
+        </div>
+      </div>
+      <!-- Info Cards Bento Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div
+          class="bg-surface-container-low p-8 rounded-2xl flex flex-col sm:flex-row gap-6 items-start border border-outline-variant/30 hover:shadow-md transition-shadow"
+        >
+          <div
+            class="w-14 h-14 shrink-0 bg-secondary-fixed flex items-center justify-center rounded-xl"
+          >
+            <span
+              class="material-symbols-outlined text-secondary text-3xl"
+              data-icon="help_center"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >help_center</span
+            >
+          </div>
+          <div>
+            <h4 class="font-headline-md text-headline-md text-primary mb-3">
+              Kenapa Butuh Persetujuan?
+            </h4>
+            <p
+              class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+            >
+              Program ini dilaksanakan hanya untuk agen asuransi jiwa yang sudah
+              bergabung dengan salah satu Perusahaan asuransi Jiwa yang sudah
+              mendaftarkan perusahaannya pada program sertifkasi AAJI
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-surface-container-low p-8 rounded-2xl flex flex-col sm:flex-row gap-6 items-start border border-outline-variant/30 hover:shadow-md transition-shadow"
+        >
+          <div
+            class="w-14 h-14 shrink-0 bg-secondary-fixed flex items-center justify-center rounded-xl"
+          >
+            <span
+              class="material-symbols-outlined text-secondary text-3xl"
+              data-icon="support_agent"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >support_agent</span
+            >
+          </div>
+          <div>
+            <h4 class="font-headline-md text-headline-md text-primary mb-3">
+              Belum Mendapat persetujuan?
+            </h4>
+            <p
+              class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+            >
+              Silakan hubungi PIC Lisensi atau Departemen Training di Kantor
+              Pusat/Cabang Perusahaan Asuransi Jiwa tempat Anda terdaftar
+              sebagai agen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Global Footer -->
+    <footer class="bg-primary dark:bg-primary-container w-full py-8 px-margin-mobile md:px-margin-desktop mt-auto z-20 relative">
+      <div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
+          <span class="text-headline-md font-headline-md font-bold text-on-primary">Sertifikasi Agen Asuransi</span>
+          <p class="font-body-sm text-body-sm text-on-primary/70 dark:text-on-primary-container/70">
+            © 2024 Asosiasi Asuransi Jiwa Indonesia (AAJI). Hak Cipta Dilindungi Undang-Undang.
+          </p>
+        </div>
+        <div class="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8">
+          <a class="font-body-sm text-body-sm text-on-primary/90 dark:text-on-primary-container/90 hover:text-secondary-fixed transition-colors" href="#">Kebijakan Privasi</a>
+          <a class="font-body-sm text-body-sm text-on-primary/90 dark:text-on-primary-container/90 hover:text-secondary-fixed transition-colors" href="#">Syarat &amp; Ketentuan</a>
+          <a class="font-body-sm text-body-sm text-on-primary/90 dark:text-on-primary-container/90 hover:text-secondary-fixed transition-colors" href="#">Pusat Bantuan</a>
+          <a class="font-body-sm text-body-sm text-on-primary/90 dark:text-on-primary-container/90 hover:text-secondary-fixed transition-colors" href="#">Peta Situs</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
