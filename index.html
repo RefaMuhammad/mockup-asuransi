@@ -155,7 +155,7 @@
       class="bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline shadow-sm docked full-width top-0 relative z-20"
     >
       <div
-        class="flex justify-between items-center w-full px-margin-desktop h-16 max-w-container-max mx-auto"
+        class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop h-16 max-w-container-max mx-auto"
       >
         <!-- Brand / Logo -->
         <a href="index.html" class="flex items-center gap-4">
@@ -194,7 +194,7 @@
           >
         </div>
         <!-- Trailing Primary Actions -->
-        <div class="flex items-center gap-4">
+        <div class="hidden md:flex items-center gap-4">
           <a
             href="register.html"
             class="border border-outline hover:bg-surface-variant text-on-surface text-label-md font-label-md px-4 py-2 rounded-lg transition-all active:scale-95"
@@ -209,11 +209,29 @@
             <span class="material-symbols-outlined text-[18px]">login</span>
           </a>
         </div>
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center p-2 text-on-surface hover:bg-surface-variant rounded-md transition-colors" aria-label="Toggle menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+      <!-- Mobile Navigation Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-surface dark:bg-surface-dim border-b border-outline-variant w-full absolute top-full left-0 z-50 shadow-lg origin-top transition-all">
+        <div class="flex flex-col p-4 gap-4 max-w-container-max mx-auto">
+          <a href="index.html" class="text-secondary dark:text-secondary-fixed-dim font-bold text-label-md py-2 border-b border-outline-variant/30">Beranda</a>
+          <a href="tentang_alur.html" class="text-on-surface-variant dark:text-surface-variant hover:text-secondary font-label-md py-2 border-b border-outline-variant/30">Tentang &amp; Alur</a>
+          <a href="kontak.html" class="text-on-surface-variant dark:text-surface-variant hover:text-secondary font-label-md py-2 border-b border-outline-variant/30">Kontak</a>
+          <div class="flex flex-col gap-3 mt-2">
+            <a href="register.html" class="border border-outline hover:bg-surface-variant text-center text-on-surface text-label-md font-label-md px-4 py-3 rounded-lg transition-all">Registrasi</a>
+            <a href="login.html" class="bg-primary-container hover:bg-primary-container/90 text-center text-on-primary text-label-md font-label-md px-4 py-3 rounded-lg flex items-center justify-center gap-2 transition-all">
+              Login <span class="material-symbols-outlined text-[18px]">login</span>
+            </a>
+          </div>
+        </div>
       </div>
     </nav>
     <!-- Main Content Area -->
     <main
-      class="flex-1 max-w-container-max mx-auto px-margin-desktop py-16 lg:pt-24 lg:pb-32 relative z-10 w-full flex"
+      class="flex-1 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 lg:pt-24 lg:pb-32 relative z-10 w-full flex"
     >
       <div
         class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-gutter items-center my-auto"
@@ -233,13 +251,13 @@
           </div>
           <!-- Typography -->
           <div class="space-y-4">
-            <h1 class="font-display-lg text-display-lg text-primary">
+            <h1 class="font-headline-md text-headline-md md:font-headline-lg md:text-headline-lg md:font-display-lg md:text-display-lg text-primary">
               Ujian Sertifikasi <br />
               <span class="text-secondary">Keagenan Asuransi</span> Jiwa
               Nasional
             </h1>
             <p
-              class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed"
+              class="font-body-md text-body-md md:font-body-lg md:text-body-lg text-on-surface-variant max-w-xl leading-relaxed"
             >
               Selamat datang di portal resmi penyelenggaraan Sertifikasi dan
               Ujian Lisensi Keagenan Asuransi AAJI untuk agen asuransi
@@ -344,5 +362,22 @@
         </div>
       </div>
     </footer>
+    <script>
+      // Mobile Menu Toggle Logic
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = menuBtn.querySelector('.material-symbols-outlined');
+
+        menuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          if (mobileMenu.classList.contains('hidden')) {
+            menuIcon.textContent = 'menu';
+          } else {
+            menuIcon.textContent = 'close';
+          }
+        });
+      });
+    </script>
   </body>
 </html>

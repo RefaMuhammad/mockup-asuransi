@@ -159,7 +159,7 @@
       class="bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline shadow-sm docked full-width top-0 relative z-20"
     >
       <div
-        class="flex justify-between items-center w-full px-margin-desktop h-16 max-w-container-max mx-auto"
+        class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop h-16 max-w-container-max mx-auto"
       >
         <!-- Brand / Logo -->
         <a href="index.html" class="flex items-center gap-4">
@@ -198,7 +198,7 @@
           >
         </div>
         <!-- Trailing Primary Actions -->
-        <div class="flex items-center gap-4">
+        <div class="hidden md:flex items-center gap-4">
           <a
             href="register.html"
             class="border border-outline hover:bg-surface-variant text-on-surface text-label-md font-label-md px-4 py-2 rounded-lg transition-all active:scale-95"
@@ -212,6 +212,24 @@
             Login
             <span class="material-symbols-outlined text-[18px]">login</span>
           </a>
+        </div>
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center p-2 text-on-surface hover:bg-surface-variant rounded-md transition-colors" aria-label="Toggle menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+      <!-- Mobile Navigation Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-surface dark:bg-surface-dim border-b border-outline-variant w-full absolute top-full left-0 z-50 shadow-lg origin-top transition-all">
+        <div class="flex flex-col p-4 gap-4 max-w-container-max mx-auto">
+          <a href="index.html" class="text-on-surface-variant dark:text-surface-variant hover:text-secondary font-label-md py-2 border-b border-outline-variant/30">Beranda</a>
+          <a href="tentang_alur.html" class="text-on-surface-variant dark:text-surface-variant hover:text-secondary font-label-md py-2 border-b border-outline-variant/30">Tentang &amp; Alur</a>
+          <a href="kontak.html" class="text-on-surface-variant dark:text-surface-variant hover:text-secondary font-label-md py-2 border-b border-outline-variant/30">Kontak</a>
+          <div class="flex flex-col gap-3 mt-2">
+            <a href="register.html" class="bg-secondary text-on-secondary text-center text-label-md font-label-md px-4 py-3 rounded-lg transition-all">Registrasi</a>
+            <a href="login.html" class="bg-primary-container hover:bg-primary-container/90 text-center text-on-primary text-label-md font-label-md px-4 py-3 rounded-lg flex items-center justify-center gap-2 transition-all">
+              Login <span class="material-symbols-outlined text-[18px]">login</span>
+            </a>
+          </div>
         </div>
       </div>
     </nav>
@@ -392,6 +410,23 @@
                   window.location.href = 'konfirmasi_register.html';
               }
           });
+      });
+    </script>
+    <script>
+      // Mobile Menu Toggle Logic
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = menuBtn.querySelector('.material-symbols-outlined');
+
+        menuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          if (mobileMenu.classList.contains('hidden')) {
+            menuIcon.textContent = 'menu';
+          } else {
+            menuIcon.textContent = 'close';
+          }
+        });
       });
     </script>
   </body>
